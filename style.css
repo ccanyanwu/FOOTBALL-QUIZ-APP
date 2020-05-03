@@ -66,13 +66,14 @@ input#next{
         background-color: #493505;
         border: none;
         margin: 1.5rem auto;
-        display: block ;
+        display: none ;
         font-family: 'Source Code Pro', monospace;
 }
 
 
 /*div containing question and options*/
 div.quiz{
+        display :none ;
         justify-self: center;
         box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
         width: auto;
@@ -120,11 +121,12 @@ input#next{
 
 h2.final-score{
         text-shadow: -1px 0 #BC2DE5, 0 1px #BC2DE5, 1px 0 #BC2DE5, 0 -1px #BC2DE5;
-        display :block ;
+        
         font-size: 5rem;
 }
 
 #play{
+        display :none ;
         width: 60%;
         margin :0 auto ;
         height :3rem ;
@@ -166,7 +168,7 @@ h2.final-score{
                 padding-bottom: 3rem;
         }
         h3.question{
-                font-size:6.25rem ;
+                font-size:3.25rem ;
         }
         
         div.options{
