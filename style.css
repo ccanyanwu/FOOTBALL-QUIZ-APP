@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap');
+
+/*basic css reset for all elements */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-size: 16px;
+  background-color: #c4c4c4;
+  color:#fff; 
+  height: 100vh;
+  line-height: 1.5;
+  background-size: cover;
+  background: linear-gradient(45deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%), url(https://res.cloudinary.com/trive/image/upload/v1588410923/Soccer.jpg) no-repeat center center fixed;
+} 
+
+.container {
+  display: grid;
+  grid-template-columns:1fr;
+  grid-gap :1.5rem ;
+  width: 100vw;
+  padding: 1.5rem;
+  overflow: hidden;
+  font-family: 'Graduate', cursive;
+} 
+
+h1.header{
+  font-size:2.5rem ;
+  justify-self: center;
+  align-self: center ;
+  text-transform: uppercase;
+  text-align: center;
+   
+  
+} 
+
+p.instruction{
+  text-align: center;
+  color: red;
+  margin-top : 4rem ;
+  
+} 
+
+input#start,
+input#next{
+        width: 12rem;
+        height: 3rem;
+        padding:.6rem;
+        justify-self: center;
+        color:#fff;
+        border-radius:.5rem ;
+        font-size:150%;
+} 
+
+input#start{
+        
+        background-color :transparent ;
+        border: 1px solid #fff ; 
+        margin-top: 4rem ;
+}
+
+input#next{
+        background-color: #493505;
+        border: none;
+        margin: 1.5rem auto;
+        display: block ;
+        font-family: 'Source Code Pro', monospace;
+}
+
+
+/*div containing question and options*/
+div.quiz{
+        justify-self: center;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+        width: auto;
+        height: auto;
+        text-align: center ;
+        padding :1rem ;
+        font-family: 'Source Code Pro', monospace;
+}
+
+/*options */
+div.options{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-gap: 1.5rem ;
+        justify-items: start;
+        align-items: flex-start;
+        padding-top: 2rem ;
+        font-family: 'Source Code Pro', monospace;
+}
+
+button{
+        padding: 0.75rem 1rem ;
+        width: 100%;
+        border: 0px ;
+        border-radius :1rem ;
+        cursor: pointer;
+        display: flex ;
+        font-family: 'Source Code Pro', monospace;
+        font-weight: 400 ;
+        
+}
+
+button span{
+        display :inline-block;
+        margin :0 auto;
+}
+
+p.correct,
+input#next{
+        
+        font-family: 'Source Code Pro', monospace;
+        font-weight: 300;
+        margin-top:4rem; 
+}
+
+h2.final-score{
+        text-shadow: -1px 0 #BC2DE5, 0 1px #BC2DE5, 1px 0 #BC2DE5, 0 -1px #BC2DE5;
+        display :block ;
+        font-size: 5rem;
+}
+
+#play{
+        width: 60%;
+        margin :0 auto ;
+        height :3rem ;
+        font-family :'Graduate', cursive;
+        background-color: #F0E24C;
+        border: 0px ;
+        border-radius :0.8rem;
+        font-weight: bold;
+        text-shadow: -1px 0 #F04C4C, 0 1px #BC2DE5, 1px 0 #BC2DE5, 0 -1px #BC2DE5;
+        margin-bottom: 3rem;
+        
+}
+
+@media all and (min-width:560px){
+        main.container{
+                heigh: 100vh ;
+                
+        }
+        h1.header{
+                font-size :500%;
+        }
+        p.instruction{
+                font-size: 350%;
+        }
+        input#start,
+        input#next{
+                width: 60%;
+                height: 6rem;
+                padding:1.2rem;
+                justify-self: center;
+                color:#fff;
+                border-radius:1rem ;
+                font-weight: bolder;
+                font-size :3rem ;
+        }
+        
+        div.quiz{
+                width: 100%;
+                padding-bottom: 3rem;
+        }
+        h3.question{
+                font-size:6.25rem ;
+        }
+        
+        div.options{
+        grid-gap: 3rem ;
+        justify-items: center ;
+        }
+        
+        button{
+                width: 80%;
+                height: 6rem ;
+                margin: 0 auto ;
+                font-size :3rem ;
+        }
+        
+        p.correct{
+                font-size: 3rem ;
+        }
+        
+        h2.final-score{
+                font-size :6rem ;
+                margin :4rem 0 10rem 0 ;
+        }
+        
+        #play{
+                width: 40%;
+                height: 5rem ;
+                font-size: 3rem ;
+        }
+}
+
