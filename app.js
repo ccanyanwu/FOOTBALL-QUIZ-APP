@@ -194,13 +194,37 @@ const clearStatus = (element) => {
 const showResults = () => {
     main.innerHTML = '';
     document.body.classList.add('final');
-
-    const finalMarkUp = `<div class="final blinking">
+   // const finalMarkUp;
+  currentScoreCounter;
+    /*const finalMarkUp = `<div class="final blinking">
     <h2 class="final-score "> Your final score is ${currentScoreCounter}%</h2>
     <input type="button" name="play" id="play" class="blinking" value="PLAY AGAIN" />
+  </div>`;*/
+  if(currentScoreCounter <= 20){
+     const finalMarkUp =  `<div class="final ">
+    <h2 class="final-score blinking "> Your final score is ${currentScoreCounter}%</h2><p class="blink">you need whipping o!, anyway pay for your cable subscription and start watching from 1997</p>
+    <input type="button" name="play" id="play" class="blinking" value="PLAY AGAIN" />
   </div>`
-
     main.insertAdjacentHTML('afterbegin', finalMarkUp);
+  } else if(currentScoreCounter > 20 && currentScoreCounter <= 79){
+       const finalMarkUp =  `<div class="final ">
+    <h2 class="final-score blinking"> Your final score is ${currentScoreCounter}%</h2><p class="blink">you watch just because you want to charge your phone in viewing center</p>
+    <input type="button" name="play" id="play" class="blinking" value="PLAY AGAIN" />
+  </div>`
+    main.insertAdjacentHTML('afterbegin', finalMarkUp);
+      
+  }else {
+       finalMarkUp =  `<div class="final ">
+    <h2 class="final-score blinking"> Your final score is ${currentScoreCounter}%</h2><p class="blink" {
+        constructor() {
+            this.prop = ""
+        }
+    }>tuale baba!!! Infact create your own quiz. I give up</p>
+    <input type="button" name="play" id="play" class="blinking" value="PLAY AGAIN" />
+  </div>`
+    main.insertAdjacentHTML('afterbegin', finalMarkUp);
+      
+  }
     
     document.getElementById('play').addEventListener('click', () => {
         window.location.reload(); 

@@ -30,6 +30,7 @@ body{
 /****************************************************************************************************/
 .container{
   display: grid;
+  
   grid-template-columns:1fr;
   grid-gap :1.5rem ;
   padding: 1.5rem;
@@ -62,8 +63,8 @@ h1.header{
 p.instruction{
   text-align: center;
   color: rgb(255, 207, 50);
-  margin-top : 4rem ;
-  font-size: xx-large;
+  margin-top : 3rem ;
+  font-size: large;
 } 
 
 /****************************************************************************************************/
@@ -158,24 +159,35 @@ div.options{
 
 h2.final-score{
         text-shadow: -1px 0 #BC2DE5, 0 1px #BC2DE5, 1px 0 #BC2DE5, 0 -1px #BC2DE5;
-        font-size: 5rem;
+        font-size: 4rem;
 }
 
 .final{
-    text-align: center ;
+    text-align : center ;
 }
 
 /****************animated text********************/
 .blinking{
-    animation:blinkingText 1.2s infinite;
+    animation:blinkingText 1.5s linear infinite;
 }
 @keyframes blinkingText{
     0%{     color: #fff;    }
-    49%{    color: #ccc; }
-    60%{    color: transparent; }
-    99%{    color:transparent;  }
+    20%{    color: #ccc; }
+    40%{    color: transparent; }
+    80%{    color:transparent;  }
     100%{   color: #000;    }
 }
+.blink{
+    animation:blinkingText 3s linear infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #fff;    }
+    20%{    color: #ccc; }
+    40%{    color: transparent; }
+    80%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+
 
 /****************************************************************************************************/
        /************************************MEDIA QUERIES************************************/
