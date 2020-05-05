@@ -171,24 +171,25 @@ h2.final-score{
 
 /****************animated text********************/
 .blinking{
-    animation:blinkingText 1.5s linear infinite;
+    animation:blinkingText 1.2s  infinite;
 }
 @keyframes blinkingText{
     0%{     color: #fff;    }
-    20%{    color: #ccc; }
-    40%{    color: transparent; }
-    80%{    color:transparent;  }
-    100%{   color: #000;    }
+    49%{    color: #ccc; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #eee;    }
 }
 .blink{
-    animation:blinkingText 3s linear infinite;
+    animation:blinkingText 7s linear infinite;
+    
 }
 @keyframes blinkingText{
     0%{     color: #fff;    }
-    20%{    color: #ccc; }
+    20%{    color: #fff; }
     40%{    color: transparent; }
     80%{    color:transparent;  }
-    100%{   color: #000;    }
+    100%{   color: #ee0;    }
 }
 
 
@@ -250,5 +251,9 @@ h2.final-score{
                 height: 5rem ;
                 font-size: 3rem ;
                 text-align: center;
+        }
+        
+        .blink{
+            font-size :300%;
         }
 }
