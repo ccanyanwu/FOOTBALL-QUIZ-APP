@@ -28,7 +28,7 @@ const start = document.querySelector('#start'),
 //array of question object 
 const questionArr = [
         {
-            question : "Question 1. Who won the Ballon d'Or in 2015?",
+            question : "Who won the Ballon d'Or in 2015?",
             choices : [
                 {option:"Messi", correct: false},
                 {option:"Ronaldo", correct: true}, 
@@ -36,7 +36,7 @@ const questionArr = [
             
         },
         {
-            question : "Question 2. Can you name the former Germany International who went on to become a professional wrestler in WWE?",
+            question : "Can you name the former Germany International who went on to become a professional wrestler in WWE?",
             choices : [
                 {option:"Ter Stegen", correct: false},
                 {option:"Tim Wiese", correct: true}, 
@@ -44,7 +44,7 @@ const questionArr = [
             
         },
         {
-            question : "Question 3. Who is the oldest manager in Premier League history?",
+            question : "Who is the oldest manager in Premier League history?",
             choices : [
                 {option:"Roy Hodgson", correct: true},
                 {option:"Alex Ferguson", correct: false}, 
@@ -52,7 +52,7 @@ const questionArr = [
             
         },
         {
-            question : "Question 4. Which country won the Russia 2018 World Cup?",
+            question : "Which country won the Russia 2018 World Cup?",
             choices : [
                 {option:"Croatia", correct: false},
                 {option:"Brazil", correct: false}, 
@@ -60,7 +60,7 @@ const questionArr = [
             
         },
         {
-            question : "Question 5. “La Liga” is the name of which European country’s professional football association?",
+            question : "“La Liga” is the name of which European country’s professional football association?",
             choices : [
                 {option:"Italy", correct: false},
                 {option:"Spain", correct: true}, 
@@ -123,17 +123,12 @@ const showQuestions = (questionArr  => {
             
         }
         button.addEventListener('click', checkAnswer); 
-        
         optionsHolder.appendChild(button);
-         
-        
-        
     });
     
-   // counter.innerText = `Q: ${(currentIndex + 1)} / ${sortQuestions.length}`
 });
 
-//
+// checks the answers and adds the result 
 const checkAnswer = (event) => {
     selectedOption = event.target;
     correct = selectedOption.dataset.correct;
@@ -148,7 +143,6 @@ const checkAnswer = (event) => {
         correctlyAnsweredQuestions.textContent = `Correctly answered questions: ${correctAnsweredQuestionCounter}/5`;
         correctlyAnsweredQuestions.classList.remove('hide'); 
 
-        //optionsHolder.children.setAttribute('disabled', 'disabled');
     } else{
         currentScoreCounter += 0; 
         currentScores.textContent = `Your current score: ${currentScoreCounter}%`;
@@ -185,9 +179,9 @@ const setStatus = (element, correct) => {
         element.classList.add('right'); 
         element.classList.remove('wrong');
     }
-    /* else {
+     else {
         element.classList.add('wrong');  
-    }*/
+    }
     element.setAttribute('disabled', 'disabled');
 }
 
@@ -201,9 +195,9 @@ const showResults = () => {
     main.innerHTML = '';
     document.body.classList.add('final');
 
-    const finalMarkUp = `<div class="final">
+    const finalMarkUp = `<div class="final blinking">
     <h2 class="final-score "> Your final score is ${currentScoreCounter}%</h2>
-    <input type="button" name="play" id="play" class="" value="PLAY AGAIN" />
+    <input type="button" name="play" id="play" class="blinking" value="PLAY AGAIN" />
   </div>`
 
     main.insertAdjacentHTML('afterbegin', finalMarkUp);
@@ -219,5 +213,5 @@ next.addEventListener('click', () => {
     nextQuestion();  
 });
 
-
+//activates all event Listeners 
 eventListeners();

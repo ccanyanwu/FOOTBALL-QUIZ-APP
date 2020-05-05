@@ -1,7 +1,12 @@
+/****************************************************************************************************/
+/************************************IMPORTS THE NECESSARY FONTS************************************/
+/****************************************************************************************************/
 @import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap');
 
-/*basic css reset for all elements */
+/****************************************************************************************************/
+/*******************************basic css reset for all elements ************************************/
+/****************************************************************************************************/ 
 *{
   margin: 0;
   padding: 0;
@@ -20,15 +25,18 @@ body{
   background: linear-gradient(45deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%), url(https://res.cloudinary.com/trive/image/upload/v1588410923/Soccer.jpg) no-repeat center center fixed;
 } 
 
+/****************************************************************************************************/
+    /************************************quiz section container************************************/
+/****************************************************************************************************/
 .container{
   display: grid;
   grid-template-columns:1fr;
   grid-gap :1.5rem ;
-  width: 100vw;
   padding: 1.5rem;
   overflow: hidden;
   font-family: 'Graduate', cursive;
 } 
+
 .right{
         background-color: #008000;
         color: #fff;
@@ -37,25 +45,30 @@ body{
         background-color: #ff0000;
         color: #fff;
 }
+.hide{
+        display: none;
+}
 
+/****************************************************************************************************/
+/************************************Welcome page/instruction page************************************/
+/****************************************************************************************************/
 h1.header{
   font-size:2.5rem ;
   justify-self: center;
   align-self: center ;
   text-transform: uppercase;
   text-align: center;
-   
-  
 } 
-
 p.instruction{
   text-align: center;
   color: rgb(255, 207, 50);
   margin-top : 4rem ;
   font-size: xx-large;
-  
 } 
 
+/****************************************************************************************************/
+        /************************************buttons************************************/
+/****************************************************************************************************/
 input#start,
 input#next{
         width: 12rem;
@@ -66,15 +79,10 @@ input#next{
         border-radius:.5rem ;
         font-size:150%;
 } 
-
 input#start{
-        
         background-color :transparent ;
         border: 1px solid #fff ; 
         margin-top: 4rem ;
-}
-.hide{
-        display: none;
 }
 input#next{
         background-color: #f7e8c5a4;
@@ -83,11 +91,49 @@ input#next{
         font-family: 'Source Code Pro', monospace;
         box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
 }
+button{
+        padding: 0.75rem 1rem ;
+        width: 100%;
+        border: 0px ;
+        border-radius :1rem ;
+        cursor: pointer;
+        display: flex ;
+        font-family: 'Source Code Pro', monospace;
+        font-weight: 400 ;
+}
+
+button span{
+        display :inline-block;
+        margin :0 auto;
+}
+
+p.correct,
+input#next{
+        font-family: 'Source Code Pro', monospace;
+        font-weight: 300;
+        margin-top:1rem; 
+}
+#play{
+        width: 60%;
+        margin :3rem auto ;
+        height :3rem ;
+        font-family :'Graduate', cursive;
+        background-color: #F0E24C;
+        border: 0px ;
+        border-radius :0.8rem;
+        font-weight: bold;
+        text-shadow: -1px 0 #F04C4C, 0 1px #BC2DE5, 1px 0 #BC2DE5, 0 -1px #BC2DE5;
+        margin-bottom: 3rem;
+        text-align: center ;
+        text-decoration: underline;
+        color :#333;
+        
+}
+
 
 
 /*div containing question and options*/
 div.quiz{
-        
         justify-self: center;
         box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
         width: auto;
@@ -108,51 +154,32 @@ div.options{
         font-family: 'Source Code Pro', monospace;
 }
 
-button{
-        padding: 0.75rem 1rem ;
-        width: 100%;
-        border: 0px ;
-        border-radius :1rem ;
-        cursor: pointer;
-        display: flex ;
-        font-family: 'Source Code Pro', monospace;
-        font-weight: 400 ;
-        
-}
 
-button span{
-        display :inline-block;
-        margin :0 auto;
-}
-
-p.correct,
-input#next{
-        
-        font-family: 'Source Code Pro', monospace;
-        font-weight: 300;
-        margin-top:1rem; 
-}
 
 h2.final-score{
         text-shadow: -1px 0 #BC2DE5, 0 1px #BC2DE5, 1px 0 #BC2DE5, 0 -1px #BC2DE5;
-        
         font-size: 5rem;
 }
 
-#play{
-        width: 60%;
-        margin :0 auto ;
-        height :3rem ;
-        font-family :'Graduate', cursive;
-        background-color: #F0E24C;
-        border: 0px ;
-        border-radius :0.8rem;
-        font-weight: bold;
-        text-shadow: -1px 0 #F04C4C, 0 1px #BC2DE5, 1px 0 #BC2DE5, 0 -1px #BC2DE5;
-        margin-bottom: 3rem;
-        
+.final{
+    text-align: center ;
 }
 
+/****************animated text********************/
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #fff;    }
+    49%{    color: #ccc; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+
+/****************************************************************************************************/
+       /************************************MEDIA QUERIES************************************/
+/****************************************************************************************************/
 @media all and (min-width:560px){
         
         h1.header{
@@ -175,7 +202,6 @@ h2.final-score{
         }
         
         div.quiz{
-                width: 100%;
                 padding-bottom: 3rem;
         }
         h3.question{
@@ -201,6 +227,7 @@ h2.final-score{
         h2.final-score{
                 font-size :6rem ;
                 margin :4rem 0 10rem 0 ;
+                text-align: center ;
         }
         
         #play{
@@ -210,4 +237,3 @@ h2.final-score{
                 text-align: center;
         }
 }
-
