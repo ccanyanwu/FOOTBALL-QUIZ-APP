@@ -12,23 +12,22 @@
   </head>
   <body>
     <main class="container" role="img" aria-label="Image Description">
-      <h1 class="header">test your knowledge of football </h1>
-      <p class="instruction">choose the correct answer to the question from the options given below</p>
-      <input type="button" name="start" id="start" value="START" />
-      <div class="quiz">
+      <h1 class="header last">test your knowledge of football </h1>
+      <p class="instruction last">choose the correct answer to the question from the options given</p>
+      <input type="button" name="start" id="start" class=" last" value="START" />
+      <div class="quiz hide last">
               <div class="quiz-question">
                       <h3 class="question"></h3>
               </div>
               <div class="options">
-                      <button type="submit" id="a">A.) <span></span></button>
-                      <button type="submit" id="b">B.) <span></span></button>
-                      <button type="submit" id="c">C.) <span></span></button>
+                      <button type="submit" class="abc">A.) <span></span></button>
+                      <button type="submit" class="abc">B.) <span></span></button>
+                      <button type="submit" class="abc">C.) <span></span></button>
               </div>
       </div>
-       <p class="correct"></p>
-      <input type="button" name="next" id="next" value="NEXT" />
-      <h2 class="final-score"></h2>
-      <input type="button" name="play" id="play" value="PLAY AGAIN" />
+       <p class="correct hide last">Correctly answered </p>
+       <p class="correct scores hide last">Current Score</p>
+      <input type="button" name="next" id="next" class="hide last" value="NEXT" />
     </main>
     <script src="app.js" type="text/javascript" charset="utf-8"></script>
   </body>

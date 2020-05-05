@@ -7,6 +7,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+*:focus{
+        outline: none;
+}
 body{
   font-size: 16px;
   background-color: #c4c4c4;
@@ -17,7 +20,7 @@ body{
   background: linear-gradient(45deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%), url(https://res.cloudinary.com/trive/image/upload/v1588410923/Soccer.jpg) no-repeat center center fixed;
 } 
 
-.container {
+.container{
   display: grid;
   grid-template-columns:1fr;
   grid-gap :1.5rem ;
@@ -26,6 +29,14 @@ body{
   overflow: hidden;
   font-family: 'Graduate', cursive;
 } 
+.right{
+        background-color: #008000;
+        color: #fff;
+}
+.wrong{
+        background-color: #ff0000;
+        color: #fff;
+}
 
 h1.header{
   font-size:2.5rem ;
@@ -39,8 +50,9 @@ h1.header{
 
 p.instruction{
   text-align: center;
-  color: red;
+  color: rgb(255, 207, 50);
   margin-top : 4rem ;
+  font-size: xx-large;
   
 } 
 
@@ -61,19 +73,21 @@ input#start{
         border: 1px solid #fff ; 
         margin-top: 4rem ;
 }
-
+.hide{
+        display: none;
+}
 input#next{
-        background-color: #493505;
+        background-color: #f7e8c5a4;
         border: none;
-        margin: 1.5rem auto;
-        display: none ;
+        margin: 1rem auto;
         font-family: 'Source Code Pro', monospace;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
 }
 
 
 /*div containing question and options*/
 div.quiz{
-        display :none ;
+        
         justify-self: center;
         box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
         width: auto;
@@ -116,7 +130,7 @@ input#next{
         
         font-family: 'Source Code Pro', monospace;
         font-weight: 300;
-        margin-top:4rem; 
+        margin-top:1rem; 
 }
 
 h2.final-score{
@@ -126,7 +140,6 @@ h2.final-score{
 }
 
 #play{
-        display :none ;
         width: 60%;
         margin :0 auto ;
         height :3rem ;
@@ -141,26 +154,24 @@ h2.final-score{
 }
 
 @media all and (min-width:560px){
-        main.container{
-                heigh: 100vh ;
-                
-        }
+        
         h1.header{
-                font-size :500%;
+                margin-top:7rem ;
+                font-size :300%;
         }
         p.instruction{
-                font-size: 350%;
+                font-size:200%;
         }
         input#start,
         input#next{
-                width: 60%;
+                width: 40%;
                 height: 6rem;
                 padding:1.2rem;
                 justify-self: center;
                 color:#fff;
                 border-radius:1rem ;
-                font-weight: bolder;
-                font-size :3rem ;
+                font-weight: bold;
+                font-size :2.5rem ;
         }
         
         div.quiz{
@@ -168,19 +179,19 @@ h2.final-score{
                 padding-bottom: 3rem;
         }
         h3.question{
-                font-size:3.25rem ;
+                font-size:2.5rem ;
         }
         
         div.options{
-        grid-gap: 3rem ;
+        grid-gap: 2rem ;
         justify-items: center ;
         }
         
         button{
                 width: 80%;
-                height: 6rem ;
+                height: 4rem ;
                 margin: 0 auto ;
-                font-size :3rem ;
+                font-size :2rem ;
         }
         
         p.correct{
@@ -193,9 +204,10 @@ h2.final-score{
         }
         
         #play{
-                width: 40%;
+                width: 60%;
                 height: 5rem ;
                 font-size: 3rem ;
+                text-align: center;
         }
 }
 
