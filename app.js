@@ -180,20 +180,20 @@ const showResults = () => {
   
   if(currentScoreCounter <= 20){
      const finalMarkUp = `<div class="final ">
-    <h2 class="final-score blinking "> Your final score is ${currentScoreCounter}%</h2><p class="blink final">E go Be! Find your strength </p>
+    <h2 class="final-score blinking "> Your final score is ${currentScoreCounter}%  </h2><p class="blink final">You answered ${correctAnsweredQuestionCounter} out of 5 questions correctly<br /> E go Be! Find your strength </p>
     <input type="button" name="play" id="play" class="blinking" value="PLAY AGAIN" />
   </div>`
     main.insertAdjacentHTML('afterbegin', finalMarkUp);
   } else if(currentScoreCounter > 20 && currentScoreCounter <= 79){
        const finalMarkUp = `<div class="final ">
-    <h2 class="final-score blinking"> Your final score is ${currentScoreCounter}%</h2><p class="blink final">Newbie! You try sha. Go again</p>
+    <h2 class="final-score blinking"> Your final score is ${currentScoreCounter}%</h2><p class="blink final">You answered ${correctAnsweredQuestionCounter} out of 5 questions correctly<br />Newbie! You try sha. Go again</p>
     <input type="button" name="play" id="play" class="blinking" value="PLAY AGAIN" />
   </div>`
     main.insertAdjacentHTML('afterbegin', finalMarkUp);
       
   }else {
        finalMarkUp = `<div class="final ">
-    <h2 class="final-score blinking"> Your final score is ${currentScoreCounter}%</h2><p class="blink final">tuale!!!, Sabinus. Infact go and coach arsenal. I give up</p>
+    <h2 class="final-score blinking"> Your final score is ${currentScoreCounter}%</h2><p class="blink final">You answered ${correctAnsweredQuestionCounter} out of 5 questions correctly<br />tuale!!!, Sabinus. Infact go and coach arsenal. I give up</p>
     <input type="button" name="play" id="play" class="blinking" value="PLAY AGAIN" />
   </div>`
     main.insertAdjacentHTML('afterbegin', finalMarkUp);
