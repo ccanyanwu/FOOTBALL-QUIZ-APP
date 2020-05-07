@@ -82,6 +82,7 @@ input#next{
         color:#fff;
         border-radius:.5rem ;
         font-size:150%;
+        cursor: pointer ;
 } 
 input#start{
         background-color :transparent ;
@@ -130,6 +131,7 @@ input#next{
         margin-bottom: 3rem;
         text-align: center ;
         text-decoration: underline;
+        cursor: pointer ;
         color :#333;
         
 }
