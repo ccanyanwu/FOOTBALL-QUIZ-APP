@@ -114,8 +114,11 @@ const showQuestions = (questionArr) => {
     
     questionArr.choices.forEach((choice, index) => {
         index++;
-        const button = document.createElement('button'); 
-        button.innerHTML = `<span>${choice}</span>`; 
+        const button = document.createElement('button');
+        
+        button.innerText = choice;
+        
+        
         button.classList.add('abc');
         button.classList.add(`abc-${index}`);
         optionsHolder.classList.remove('disable');
@@ -126,6 +129,7 @@ const showQuestions = (questionArr) => {
         choice1 = document.querySelector('.abc-1');
         choice2 = document.querySelector('.abc-2');
         choice3 = document.querySelector('.abc-3');
+        
         button.addEventListener('click', checkAnswer);     
     });
     

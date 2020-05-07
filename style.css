@@ -102,9 +102,10 @@ button{
         border: 0px ;
         border-radius :1rem ;
         cursor: pointer;
-        display: flex ;
+        
         font-family: 'Source Code Pro', monospace;
         font-weight: 400 ;
+        text-align: center!important ;
 }
 
 button span{
